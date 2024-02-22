@@ -3,9 +3,9 @@ entries:
   golang-onechart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-02-22T17:36:38.2111996+08:00"
+    created: "2024-02-22T17:54:04.1428965+08:00"
     description: A Helm chart for Kubernetes
-    digest: d7c3c749f1f7e8e00659de550fa0766f1e0176f7a5bac89c3daee9e95eebe962
+    digest: 3df6963864b398d63d9f2b3b0e1e6614b64ec800df9201d05006054cdd33aea8
     name: golang-onechart
     type: application
     urls:
@@ -14,12 +14,12 @@ entries:
   react-onechart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-02-22T17:36:38.2117136+08:00"
+    created: "2024-02-22T17:54:04.1428965+08:00"
     description: A Helm chart for Kubernetes
-    digest: f9686e49fc32fd390f17a2723d49b68161daa0a4c32980ee502e60514dcbdac0
+    digest: ff4f521acbb12a63207948f9d9259808371fe2ae9ba89d7b0af3b1c74ed9a3f2
     name: react-onechart
     type: application
     urls:
     - https://nextvirus.github.io/easy-devops-one-chart/react-onechart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-22T17:36:38.2111996+08:00"
+generated: "2024-02-22T17:54:04.1423868+08:00"

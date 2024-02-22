@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "easydevops-one-chart.name" -}}
+{{- define "golang-onechart.fullname" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "easydevops-one-chart.fullname" -}}
+{{- define "golang-onechart.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "easydevops-one-chart.chart" -}}
+{{- define "golang-onechart.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "easydevops-one-chart.labels" -}}
-helm.sh/chart: {{ include "easydevops-one-chart.chart" . }}
-{{ include "easydevops-one-chart.selectorLabels" . }}
+{{- define "golang-onechart.labels" -}}
+helm.sh/chart: {{ include "golang-onechart.chart" . }}
+{{ include "golang-onechart.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "easydevops-one-chart.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "easydevops-one-chart.name" . }}
+{{- define "golang-onechart.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "golang-onechart.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "easydevops-one-chart.serviceAccountName" -}}
+{{- define "golang-onechart.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "easydevops-one-chart.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "golang-onechart.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

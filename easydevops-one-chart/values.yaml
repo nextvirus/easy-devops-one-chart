@@ -84,22 +84,22 @@ readinessProbe:
 
 
 # Additional volumes on the output Deployment definition.
-volumes: 
-- name: lihai-easydevops-one-chart
-  configMap:
-    name: lihai-easydevops-one-chart
-    defaultMode: 420
-- name: front-env-config
-  configMap:
-    name: easydevops-sit-front-env-config
+volumes: []
+# - name: lihai-easydevops-one-chart
+#   configMap:
+#     name: lihai-easydevops-one-chart
+#     defaultMode: 420
+# - name: front-env-config
+#   configMap:
+#     name: easydevops-sit-front-env-config
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts: 
-- name: lihai-easydevops-one-chart
-  mountPath: /data
+volumeMounts: []
+# - name: lihai-easydevops-one-chart
+#   mountPath: /data
 
-- name: front-env-config
-  mountPath: /usr/share/nginx/html/
+# - name: front-env-config
+#   mountPath: /usr/share/nginx/html/
 
 
 nodeSelector: {}

@@ -15,7 +15,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-command: ["/bin/bash"]
+command: ["/bin/bash","-c"]
 args: ["./backend --config /data/config.yaml "]
 mountPath: /data
 

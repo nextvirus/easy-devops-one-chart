@@ -17,7 +17,8 @@ fullnameOverride: ""
 
 command: []
 args: []
-mountPath: /usr/share/nginx/html/
+mountPath: /usr/share/nginx/html/config.js
+subPath: config.js
 
 serviceAccount:
   # Specifies whether a service account should be created

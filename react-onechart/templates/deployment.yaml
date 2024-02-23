@@ -47,6 +47,7 @@ spec:
           volumeMounts:
             - name: {{ include "react-onechart.fullname" . }}
               mountPath: {{ .Values.mountPath }}
+              subPath: {{ .Values.subPath }}
 
       volumes:
         - name: {{ include "react-onechart.fullname" . }}
